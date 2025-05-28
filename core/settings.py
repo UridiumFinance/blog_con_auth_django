@@ -303,6 +303,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # Configuración de archivos estáticos
 STATIC_LOCATION = "static"
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # STATIC_URL = f"{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/"
 # STATICFILES_STORAGE = "core.storage_backends.StaticStorage"
 
