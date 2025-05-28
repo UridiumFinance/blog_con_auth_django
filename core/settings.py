@@ -302,13 +302,15 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 # Configuración de archivos estáticos
 STATIC_LOCATION = "static"
-STATIC_URL = f"{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/"
-STATICFILES_STORAGE = "core.storage_backends.StaticStorage"
+STATIC_URL = '/static/'
+# STATIC_URL = f"{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/"
+# STATICFILES_STORAGE = "core.storage_backends.StaticStorage"
 
 # Configuración de archivos de medios
 MEDIA_LOCATION = "media"
-MEDIA_URL = f"https://{AWS_CLOUDFRONT_DOMAIN}/{MEDIA_LOCATION}/"
-DEFAULT_FILE_STORAGE = "core.storage_backends.PublicMediaStorage"
+MEDIA_URL = '/media/'
+# MEDIA_URL = f"https://{AWS_CLOUDFRONT_DOMAIN}/{MEDIA_LOCATION}/"
+# DEFAULT_FILE_STORAGE = "core.storage_backends.PublicMediaStorage"
 
 
 if not DEBUG:
