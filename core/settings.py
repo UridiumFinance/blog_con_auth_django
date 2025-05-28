@@ -277,28 +277,28 @@ CELERY_BEAT_SCHEDULE = {}
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-# Configuracion de Cloudfront
-AWS_CLOUDFRONT_DOMAIN=env("AWS_CLOUDFRONT_DOMAIN")
-AWS_CLOUDFRONT_KEY_ID =env.str("AWS_CLOUDFRONT_KEY_ID").strip()
-AWS_CLOUDFRONT_KEY =env.str("AWS_CLOUDFRONT_KEY", multiline=True).encode("ascii").strip()
+# # Configuracion de Cloudfront
+# AWS_CLOUDFRONT_DOMAIN=env("AWS_CLOUDFRONT_DOMAIN")
+# AWS_CLOUDFRONT_KEY_ID =env.str("AWS_CLOUDFRONT_KEY_ID").strip()
+# AWS_CLOUDFRONT_KEY =env.str("AWS_CLOUDFRONT_KEY", multiline=True).encode("ascii").strip()
 
-# Configuraciones de AWS
-AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME=env("AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME=env("AWS_S3_REGION_NAME")
-AWS_S3_CUSTOM_DOMAIN=f"{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com"
+# # Configuraciones de AWS
+# AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
+# AWS_STORAGE_BUCKET_NAME=env("AWS_STORAGE_BUCKET_NAME")
+# AWS_S3_REGION_NAME=env("AWS_S3_REGION_NAME")
+# AWS_S3_CUSTOM_DOMAIN=f"{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com"
 
-# Configuración de seguridad y permisos
-AWS_QUERYSTRING_AUTH = False # Deshabilita las firmas en las URLs (archivos públicos)
-AWS_FILE_OVERWRITE = False # Evita sobrescribir archivos con el mismo nombre
-AWS_DEFAULT_ACL = None # Define el control de acceso predeterminado como público
-AWS_QUERYSTRING_EXPIRE = 5 # Tiempo de expiración de las URLs firmadas
+# # Configuración de seguridad y permisos
+# AWS_QUERYSTRING_AUTH = False # Deshabilita las firmas en las URLs (archivos públicos)
+# AWS_FILE_OVERWRITE = False # Evita sobrescribir archivos con el mismo nombre
+# AWS_DEFAULT_ACL = None # Define el control de acceso predeterminado como público
+# AWS_QUERYSTRING_EXPIRE = 5 # Tiempo de expiración de las URLs firmadas
 
-# Parámetros adicionales para los objetos de S3
-AWS_S3_OBJECT_PARAMETERS = {
-    "CacheControl": "max-age=86400" # Habilita el almacenamiento en caché por un día
-}
+# # Parámetros adicionales para los objetos de S3
+# AWS_S3_OBJECT_PARAMETERS = {
+#     "CacheControl": "max-age=86400" # Habilita el almacenamiento en caché por un día
+# }
 
 # Configuración de archivos estáticos
 STATIC_LOCATION = "static"
